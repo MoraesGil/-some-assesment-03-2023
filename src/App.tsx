@@ -1,11 +1,12 @@
 import React from 'react';
-import Hello from './Hello';
+import { Container, InputField, Label } from './components';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Hello />
-    </div>
+    <Container>
+      <Label htmlFor="users">Search by user name:</Label>
+      <InputField />
+    </Container>
   );
 };
 
