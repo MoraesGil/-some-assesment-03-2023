@@ -4,6 +4,7 @@ This is a front-end TypeScript webapp with support for universal React.
 
 All source code lives in `src` directory:
 
+```
 src
 ├── App.tsx
 ├── components
@@ -42,6 +43,8 @@ src
 │ └── option.tsx
 ├── index.css
 ├── index.tsx
+``` 
+ 
 
 ## You can see a Live DEMO on
 
