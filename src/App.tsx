@@ -41,7 +41,9 @@ const App: React.FC = () => {
       />
       {value && (
         <pre>
-          <code>{JSON.stringify({ value })}</code>
+          <code>
+            {JSON.stringify({ id: value.value, username: value.label })}
+          </code>
         </pre>
       )}
     </Container>
