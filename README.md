@@ -1,3 +1,7 @@
+## Questions
+
+Access [questions.md](questions.md) 
+
 ## Code overview
 
 This is a front-end TypeScript webapp with support for universal React.
