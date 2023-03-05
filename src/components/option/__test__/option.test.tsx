@@ -5,13 +5,13 @@ import { Option } from '../option';
 const option = { value: 'value', label: 'label' };
 
 describe('<Option />', () => {
-  test('should render the option text', () => {
+  it('should render the option text', () => {
     render(<Option>option</Option>);
     const children = screen.getByText(/option/i);
     expect(children).toBeInTheDocument();
   });
 
-  test('should pass option data when clicked', () => {
+  it('should pass option data when clicked', () => {
     const mockOnSelect = jest.fn((option) => option);
     render(
       <Option option={option} onSelect={mockOnSelect}>
@@ -23,7 +23,7 @@ describe('<Option />', () => {
     expect(mockOnSelect).toHaveBeenCalledWith(option);
   });
 
-  test('should not call onSelect when disabled', () => {
+  it('should not call onSelect when disabled', () => {
     const mockOnSelect = jest.fn((option) => option);
     render(
       <Option option={option} onSelect={mockOnSelect} disabled>
