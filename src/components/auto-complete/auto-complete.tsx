@@ -55,6 +55,23 @@ export const AutoComplete: React.FC<AutoCompleteProps> = ({
     };
   }, [handleClickOutside]);
 
+  const handleEscKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsDropdownOpen(false);
+      }
+    },
+    [setIsDropdownOpen]
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleEscKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKeyDown);
+    };
+  }, [handleEscKeyDown]);
+
   const handleFocusEvent = () => setIsDropdownOpen(true);
 
   const handleBlurEvent = () => {
